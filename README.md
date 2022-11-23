@@ -10,19 +10,20 @@ https://drive.google.com/file/d/1niq7mKEjL3U7RovwvS9Z3xA-fp8mQvRB/view?usp=shari
 
 ```
 SELECT category_id, `name`, AVG(price)
-FROM shops.good
+FROM good
 GROUP BY `name`
 ORDER BY `category_id`;
 ```
 
 ```
-SELECT category_id, AVG(price)
-FROM shops.good
-GROUP BY category_id;
+SELECT id, `name`, count
+FROM good 
+WHERE `name` LIKE 'Айс %' OR `name` LIKE '%пуэр%' AND `count` > 300
+GROUP BY `name`;
 ```
 ```
 SELECT id, `name`, email, reg_date
-FROM shops.`user`
+FROM `user`
 WHERE reg_date BETWEEN '2018-01-01 00:00:01' AND '2018-01-31 23:59:59'
 ORDER BY id;
 ```

@@ -1,7 +1,8 @@
 ## Some SQL queries made by me 
 
-### Link to dump
+### Link to dump 
 https://drive.google.com/file/d/1niq7mKEjL3U7RovwvS9Z3xA-fp8mQvRB/view?usp=sharing
+
 
 
 **SELECT**
@@ -71,4 +72,24 @@ FROM `order` o
 JOIN order2good o2g ON o2g.order_id = o.id
 JOIN good g ON g.id = o2g.good_id
 WHERE g.`name` LIKE '%йогурт%';
+```
+
+**INSERT**
+```
+INSERT INTO `good` (`category_id`, `name`, `count`, `price`)
+VALUES (6, 'Tieguanyin', '40', '700'),
+        (6, 'Baihao Yinzhen', '35','900'),
+        (6, 'Da Hong Pao', '30','500');
+```
+**UPDATE**
+```
+UPDATE `good` SET 
+	`name` = 'Mao Se',
+    `count` = 20
+    WHERE `id` = 7;
+```
+**DELETE**
+```
+DELETE FROM `good`
+WHERE `id` = 534;
 ```

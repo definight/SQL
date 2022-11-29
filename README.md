@@ -11,7 +11,7 @@ https://drive.google.com/file/d/1niq7mKEjL3U7RovwvS9Z3xA-fp8mQvRB/view?usp=shari
 ```
 SELECT category_id, `name`, AVG(price)
 FROM good
-GROUP BY `name`
+GROUP BY `category_id`
 ORDER BY `category_id`;
 ```
 
